@@ -16,9 +16,9 @@ jobs:
           python-version: '3.x'
       
       - name: Install and set up Poetry
-          run: |
-            curl -sSL https://install.python-poetry.org | python3 -
-            echo "PATH=$HOME/.poetry/bin:$PATH" >> $GITHUB_ENV
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          echo "PATH=$HOME/.poetry/bin:$PATH" >> $GITHUB_ENV
         
       - name: Install dependencies
         run: |
