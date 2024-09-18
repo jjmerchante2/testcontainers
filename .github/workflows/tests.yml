@@ -27,4 +27,4 @@ jobs:
       - name: Run tests
         run: |
           cd tests
-          poetry run run_tests.sh
+          poetry run run_tests.py
