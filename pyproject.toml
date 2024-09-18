@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "example"
+version = "0.1.0"
+description = ""
+authors = ["Jose Javier Merchante <jjmerchante@bitergia.com>"]
+readme = "README.md"
+
+packages = [
+    { include = "example.py", from = "." }
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+testcontainers = "^4.8.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
