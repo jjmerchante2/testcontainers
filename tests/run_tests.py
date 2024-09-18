@@ -1,6 +1,6 @@
 import sqlite3
 import unittest
-from testcontainers.sqlite import MariaDBContainer
+from testcontainers.mariadb import MariaDBContainer
 
 from example import DatabaseManager
 
