@@ -7,24 +7,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.x'
-    
-    - name: Install and set up Poetry
-        run: |
-          curl -sSL https://install.python-poetry.org | python3 -
-          echo "PATH=$HOME/.poetry/bin:$PATH" >> $GITHUB_ENV
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
       
-    - name: Install dependencies
-      run: |
-        poetry install -vvv
+      - name: Install and set up Poetry
+          run: |
+            curl -sSL https://install.python-poetry.org | python3 -
+            echo "PATH=$HOME/.poetry/bin:$PATH" >> $GITHUB_ENV
+        
+      - name: Install dependencies
+        run: |
+          poetry install -vvv
 
-    - name: Run tests
-      run: |
-        cd tests
-        python run_tests.py
+      - name: Run tests
+        run: |
+          cd tests
+          python run_tests.py
