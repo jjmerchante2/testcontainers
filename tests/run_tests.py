@@ -1,13 +1,13 @@
 import sqlite3
 import unittest
-from testcontainers.mariadb import MariaDBContainer
+from testcontainers.mysql import MySqlContainer
 
 from example import DatabaseManager
 
 
 class TestDatabaseManager(unittest.TestCase):
     def setUp(self):
-        self.container = MariaDBContainer()
+        self.container = MySqlContainer()
         self.container.start()
         self.db = DatabaseManager(self.container.get_connection_url())
 
